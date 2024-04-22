@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
+from markupsafe import escape  # Importing escape from MarkupSafe
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 import uuid
-
 app = Flask('carz24')
 
 def generate_plot(y_actual, y_pred):
