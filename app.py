@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
 from markupsafe import escape  # Importing escape from MarkupSafe
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Use the 'Agg' backend which doesn't require a GUI
 import matplotlib.pyplot as plt
 import os
 import uuid
+
 app = Flask('carz24')
 
 def generate_plot(y_actual, y_pred):
@@ -15,7 +18,7 @@ def generate_plot(y_actual, y_pred):
     plt.plot([min(y_actual), max(y_actual)], [min(y_actual), max(y_actual)], 'r--')
     if not os.path.exists('static'):
         os.makedirs('static')
-    plot_filename = f'static/prediction_plot_{uuid.uuid4()}.png'
+    plot_filename = 'static/prediction_plot.png'
     plt.savefig(plot_filename)
     plt.close()
     return plot_filename
@@ -45,4 +48,4 @@ def index():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True,port=8080,host='0.0.0.0')
+    app.run(debug=True, port=8080, host='0.0.0.0')

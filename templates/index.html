@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Model for Prediction</title>
+    <title>ML Analysis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Select Model Type</h1>
+    <h1>ML Analysis</h1>
     <form action="/" method="post">
-        <input type="radio" id="Linear" name="model_type" value="Linear">
-        <label for="Linear">Linear Regression</label><br>
-        <input type="radio" id="RandomForest" name="model_type" value="RandomForest">
-        <label for="RandomForest">Random Forest</label><br>
+        <div>
+            <input type="radio" id="Linear" name="model_type" value="Linear" required>
+            <label for="Linear">Linear Regression</label><br>
+            <input type="radio" id="RandomForest" name="model_type" value="RandomForest" required>
+            <label for="RandomForest">Random Forest</label>
+        </div>
         <input type="submit" value="Predict">
     </form>
 </body>

@@ -11,9 +11,15 @@
     <div class="results">
         <p><strong>MSE:</strong> {{ mse }}</p>
         <p><strong>MAE:</strong> {{ mae }}</p>
-        <p><strong>R2 Score:</strong> {{ r2 }}</p>
+        <p><strong>R² Score:</strong> {{ r2 }}</p>
+        {% if model_type == 'predict_selling_price' %}
+            <p><strong>Predicted Selling Price:</strong> ${{ predicted_price }}</p>
+        {% endif %}
     </div>
     <h2>Plot of Predicted vs. Actual Values</h2>
     <img src="{{ url_for('static', filename='prediction_plot.png') }}" alt="Predicted vs. Actual Values">
+    <div>
+        <a href="/">Try another prediction</a>
+    </div>
 </body>
 </html>

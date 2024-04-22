@@ -1,0 +1,103 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+h1, h2 {
+    color: #0056b3;
+}
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+label {
+    margin-right: 10px;
+}
+.results {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+} */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Add space between form and any content above it */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="radio"] {
+    padding: 8px;
+    margin-bottom: 10px; /* Space between form fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+label {
+    margin-right: 10px;
+    display: block; /* Makes the label take the full width, aligning text fields neatly */
+    font-weight: bold; /* Emphasize labels for better readability */
+}
+
+.results {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Ensures consistent spacing around results box */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
